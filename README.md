@@ -4,12 +4,15 @@ The Following program using gradient descent to perform Linear regression on the
 
 The TODO list is as follows:
  
-Working Gradient Descent:  
-Input data from text file:
-High order Polynomial for non-linear data:
-Add Regularisation:
-Add Command Line Capabilities:
-A decent GUI:            //Not a priority,though preferred
+ 
+ Calculation of Cost:  Done!
+ Code for Gradient Descent :  Done! 
+Working Gradient Descent:  Debugging left to be done
+Input data from text file:  X
+High order Polynomial for non-linear data:  X
+Add Regularisation:    X
+Add Command Line Capabilities:    X
+A decent GUI:   X        //Not a priority,though preferred
 
 
 
