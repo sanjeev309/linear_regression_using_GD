@@ -7,10 +7,10 @@
 #include <conio.h>
 
 
- float theta[]={1.0,1.0};                   //Fitting parameters
+ float theta[]={0.0,0.0};                   //Fitting parameters
  float x[50],y[50],err[50];                 //Data arrays
  float n,sumerr0,sumerr1,sumsqerr;                   //Useful variables
- float alpha=0.1;                                  //Adjust learning rate alpha here
+ float alpha=0.1;                                  //Adjust learning rate alpha 
 
  void grad_descent();
  void cost();
@@ -23,10 +23,16 @@ void main(){
 	float data;
 	int i,ch,epoch=0;
 	float cost_prev=10000000,cost_now;                           // Starting up with an arbitirarily high cost 
+	
+	FILE *fp;                                                    //File Handling Operations
+	fp=fopen("data.txt","w+");
+	
+	
+	
 	printf("Enter the number of training Samples:");
 	scanf("%f",&n);
 	
-	for(i=0;i<n;i++)
+	for(i=0;i<(int)n;i++)
 	{  printf("Enter data %d:",i+1);
 	    scanf("%f %f",&tempx,&tempy);
 		x[i]=tempx;
@@ -41,23 +47,24 @@ void main(){
 		grad_descent();
 		cost_now=costfunction();
 		printf("cost: %f   t0: %f   t1: %f \n",cost_now,theta[0],theta[1]);
+		fprintf(fp,"Iteration: %d	Cost: %f	  Theta0: %f	  Theta1: %f \n",epoch,cost_now,theta[0],theta[1]);
 		epoch++;
 	}
 
 	printf("\n System Trained after %d iterations",epoch);
 	printf("\n Enter Input to perform regression:");
 	
-	while(getch()){
+	while(1){
 	scanf("%f",&tempx);                  //Re-using variables
 	tempy=resolver(tempx);
-	printf("     %f",tempy);
+	printf("     %f \n",tempy);
 	}
 }
 
 
 void cost(){
 	int i;
-	for(i=0;i<n;i++){
+	for(i=0;i<(int)n;i++){
 	err[i]=resolver(x[i]) - y[i];
 	}
 }
