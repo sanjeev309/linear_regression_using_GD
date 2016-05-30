@@ -54,6 +54,8 @@ void main(){
 	printf("\n System Trained after %d iterations",epoch);
 	printf("\n Enter Input to perform regression:");
 	
+	fclose(fp);
+	
 	while(1){
 	scanf("%f",&tempx);                  //Re-using variables
 	tempy=resolver(tempx);
