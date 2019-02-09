@@ -1,0 +1,6 @@
+bin/
+obj/
+data.txt
+linear_regression_using_GD.cbp
+linear_regression_using_GD.depend
+linear_regression_using_GD.layout
