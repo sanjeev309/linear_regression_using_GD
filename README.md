@@ -41,4 +41,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## Acknowledgments
 
-* This project dates to 3+ years when I just began with Andrew Ng's ML course in MATLAB. A lot of gratitude for him and the initiative.
+* This project dates back to 3+ years when I just began with Andrew Ng's ML course in MATLAB. A lot of gratitude for him and the initiative.
